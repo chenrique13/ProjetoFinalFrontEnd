@@ -1,0 +1,22 @@
+.card {
+  max-width: 400px;
+  max-height: 400px;
+}
+.card img{
+  height: 250px;
+  width: 350px;
+}
+
+.editar{
+  float: right;
+  color: #ffe100;
+}
+
+.deletar{
+  margin-left: 10px;
+  float: right;
+  color: #ff0000;
+}
+mat-grid-list{
+  margin-bottom: 150px;
+}

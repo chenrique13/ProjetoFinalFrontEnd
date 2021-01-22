@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-title>Alterar Fornecedor</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nome" [(ngModel)]="fornecedor.nome" name="nome">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Endereco" [(ngModel)]="fornecedor.endereco" name="endereco">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Telefone" [(ngModel)]="fornecedor.telefone" name="telefone">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Cnpj" [(ngModel)]="fornecedor.cnpj" name="cnpj">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Email" [(ngModel)]="fornecedor.email" name="email">
+    </mat-form-field>
+
+  </form>
+
+  <button mat-raised-button (click)="editar()" color="warn">
+    Atualizar
+  </button>
+
+  <button mat-raised-button (click)="cancelar()">
+    Cancelar
+  </button>
+</mat-card>

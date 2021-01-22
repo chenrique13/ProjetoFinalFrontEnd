@@ -1,0 +1,32 @@
+.header{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header a:hover, .header a:visited {
+  color: black;
+}
+
+/* Se for uma img */
+.header .logo {
+  max-width: 60px;
+}
+
+.material-icons.logo{
+  font-size: 70px;
+  padding-right: 10px;
+}
+
+.header .title-group {
+    padding-left: 25px;
+}
+

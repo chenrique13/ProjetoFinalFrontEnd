@@ -1,0 +1,24 @@
+<mat-grid-list cols="3">
+  <mat-grid-tile *ngFor="let faq of faqs">
+    <mat-card class="card mat-elevation-z8">
+      <img mat-card-image src="{{faq.produto.imgUrl}}" alt="{{faq.produto.nome}}">
+      <mat-card-content>
+        Nome: {{faq.produto.nome}}
+        <br>
+        Comentario: {{faq.texto}}
+        <br>
+        Data: {{faq.data_hora | date: "dd/MM/yyyy HH:mm"}}
+        <a routerLink="/faqs/deletar/{{faq.id}}">
+          <i class="material-icons deletar">
+            delete
+          </i>
+        </a>
+        <a routerLink="/faqs/editar/{{faq.id}}">
+          <i class="material-icons editar">
+            edit
+          </i>
+        </a>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

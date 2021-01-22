@@ -1,0 +1,49 @@
+<mat-sidenav-container class="container" fullscreen>
+  <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+    <mat-nav-list class="nav-list">
+      <a mat-list-item routerLink="/">
+        <i class="material-icons">home</i>
+        Início
+      </a>
+      <a mat-list-item routerLink="/categorias">
+        <i class="material-icons">devices_other</i>
+        Categorias
+      </a>
+      <a mat-list-item routerLink="/clientes">
+        <i class="material-icons">sentiment_satisfied_alt</i>
+        Clientes
+      </a>
+      <a mat-list-item routerLink="/faqs">
+        <i class="material-icons">support_agent</i>
+        Faq
+      </a>
+      <a mat-list-item routerLink="/formaspagamento">
+        <i class="material-icons">payment</i>
+        Formas de Pagamento
+      </a>
+      <a mat-list-item routerLink="/fornecedores">
+        <i class="material-icons">airport_shuttle</i>
+        Fornecedores
+      </a>
+ <!--     <a mat-list-item routerLink="/itensvendas">
+        <i class="material-icons">local_offer</i>
+        Itens Vendas
+      </a>-->
+      <a mat-list-item routerLink="/marcas">
+        <i class="material-icons">local_play</i>
+        Marcas
+      </a>
+      <a mat-list-item routerLink="/produtos">
+        <i class="material-icons">laptop</i>
+        Produtos
+      </a>
+      <a mat-list-item routerLink="/vendas">
+        <i class="material-icons">local_atm</i>
+        Vendas
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

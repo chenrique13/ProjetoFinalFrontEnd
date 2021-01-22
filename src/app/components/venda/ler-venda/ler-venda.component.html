@@ -1,0 +1,24 @@
+<mat-grid-list cols="3" rowHeight="1:0.55">
+  <mat-grid-tile *ngFor="let venda of vendas">
+    <mat-card class="card mat-elevation-z8">
+      <h2>Número da Venda</h2>
+      <h3>{{venda.id}}</h3>
+      <strong>Cliente:</strong> {{venda.cliente.nome}}
+      <br>
+      <strong>Valor Total:</strong> {{venda.valorTotal}}
+      <br>
+      <strong>Forma de Pagamento:</strong> {{venda.formaPagamento.forma}}
+      <br>
+      <strong>Descrição:</strong> {{venda.formaPagamento.descricao}}
+      <br>
+      <strong>Data:</strong> {{venda.dataHora | date: "dd/MM/yyyy HH:mm"}}
+
+      <a routerLink="/vendas/deletar/{{venda.id}}" >
+        <i class="material-icons deletar">
+          delete
+        </i>
+      </a>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+

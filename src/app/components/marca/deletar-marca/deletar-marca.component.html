@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-title>Deletar Marca</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nome" [(ngModel)]="marca.nome" name="nome" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Descrição" [(ngModel)]="marca.descricao" name="descricao" disabled>
+    </mat-form-field>
+  </form>
+    <button mat-raised-button (click)="deletar()" color="accent">
+      Deletar
+    </button>
+
+    <button mat-raised-button (click)="cancelar()">
+      Cancelar
+    </button>
+</mat-card>

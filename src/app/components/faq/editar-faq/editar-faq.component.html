@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-title>Alterar Faq</mat-card-title>
+  <form>
+      <mat-form-field>
+          <input matInput placeholder="Texto" [(ngModel)]="faq.texto" name="texto">
+      </mat-form-field>
+
+      <mat-form-field>
+          <mat-label>Produto</mat-label>
+          <select matNativeControl name="produtoId" [(ngModel)]="faq.produto.id">
+              <option *ngFor="let produto of produtos" value="{{produto.id}}">{{produto.nome}}</option>
+          </select>
+      </mat-form-field>
+  </form>
+
+  <button mat-raised-button (click)="editar() " color="warn">
+    Atualizar
+  </button>
+
+  <button mat-raised-button (click)="cancelar()">
+      Cancelar
+  </button>
+</mat-card>

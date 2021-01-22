@@ -1,0 +1,39 @@
+<a routerLink="/produtos" (click)="comprar()">
+  <i class="material-icons logo">
+    add_shopping_cart
+  </i>
+</a>
+
+<mat-grid-list cols="3" rowHeight="1:1.15">
+  <mat-grid-tile *ngFor="let produto of produtos">
+    <mat-card class="card mat-elevation-z8">
+      <img mat-card-image src="{{produto.imgUrl}}" alt="{{produto.nome}}">
+      <mat-card-content>
+        Nome: {{produto.nome}}
+        <button class="add" name="{{produto.nome}}" color="primary" value="{{produto.id}}" (click)="adicionarCarrinho(produto)">+</button>
+        <br>
+        Descrição: {{produto.descricao}}
+        <br>
+        Preço: {{produto.preco}}
+        <br>
+        Unidades: {{produto.unidade}}
+        <br>
+        Categoria: {{produto.categoria.nome}}
+        <br>
+        Marca: {{produto.marca.nome}}
+        <br>
+        Fornecedor: {{produto.fornecedor.nome}}
+        <a routerLink="/produtos/deletar/{{produto.id}}">
+          <i class="material-icons deletar">
+            delete
+          </i>
+        </a>
+        <a routerLink="/produtos/editar/{{produto.id}}">
+          <i class="material-icons editar">
+            edit
+          </i>
+        </a>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

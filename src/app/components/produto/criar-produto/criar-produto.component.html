@@ -1,0 +1,46 @@
+<mat-card>
+    <mat-card-title>Novo Produto</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="produto.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Descrição" [(ngModel)]="produto.descricao" name="descricao">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Url" [(ngModel)]="produto.imgUrl" name="url">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço" [(ngModel)]="produto.preco" name="preco">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Unidades" [(ngModel)]="produto.unidade" name="unidades">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Categoria</mat-label>
+            <mat-select name="categoriaId" [(ngModel)]="produto.categoria.id">
+                <mat-option *ngFor="let categoria of categorias" value="{{categoria.id}}">{{categoria.nome}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Marca</mat-label>
+            <mat-select name="marcaId" [(ngModel)]="produto.marca.id">
+                <mat-option *ngFor="let marca of marcas" value="{{marca.id}}">{{marca.nome}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Fornecedor</mat-label>
+            <mat-select name="fornecedorId" [(ngModel)]="produto.fornecedor.id">
+                <mat-option *ngFor="let fornecedor of fornecedores" value="{{fornecedor.id}}">{{fornecedor.nome}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="criar()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancelar()">
+        Cancelar
+    </button>
+</mat-card>

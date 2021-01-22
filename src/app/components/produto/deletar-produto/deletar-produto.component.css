@@ -1,0 +1,12 @@
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+button{
+  margin-top: 10px;
+  margin-right: 20px;
+}
+mat-card{
+  margin-bottom: 150px;
+  }

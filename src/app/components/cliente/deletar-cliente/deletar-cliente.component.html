@@ -1,0 +1,37 @@
+<mat-card>
+  <mat-card-title>Deletar Cliente</mat-card-title>
+  <form>
+      <mat-form-field>
+          <input matInput placeholder="NOME" [(value)]="cliente.nome" name="nome" disabled>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="CPF" [(value)]="cliente.cpf" name="cpf" disabled>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="EMAIL" [(value)]="cliente.email" name="email" disabled>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput type="date" placeholder="DATA DE NASCIMENTO" [(value)]="cliente.dataNascimento" name="dataNascimento" disabled>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="SEXO" [(value)]="cliente.sexo" name="sexo" disabled>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="NOME SOCIAL" [(value)]="cliente.nomeSocial" name="nomeSocial" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="APELIDO" [(value)]="cliente.apelido" name="apelido" disabled>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="TELEFONE" [(value)]="cliente.telefone" name="telefone" disabled>
+</mat-form-field>
+  </form>
+
+  <button mat-raised-button (click)="deletar()" color="accent">
+      Deletar
+  </button>
+
+  <button mat-raised-button (click)="cancelar()">
+      Cancelar
+  </button>
+</mat-card>

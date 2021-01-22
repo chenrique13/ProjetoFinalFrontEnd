@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-title>Deletar Venda</mat-card-title>
+  <form>
+      <mat-form-field>
+          <input matInput placeholder="CODIGO" [(value)]="venda.id" name="id" disabled>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="NOME DO CLIENTE" [(value)]="venda.cliente.nome" name="nome" disabled>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="VALOR TOTAL" [(value)]="venda.valorTotal" name="total" disabled>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="FORMA DE PAGAMENTO" [(value)]="venda.formaPagamento.forma" name="forma" disabled>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="DESCRIÇÃO DO PAGAMENTO" [(value)]="venda.formaPagamento.descricao" name="descricao" disabled>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="date" placeholder="DATA" [(value)]="venda.dataHora" name="data" disabled>
+    </mat-form-field>
+  </form>
+
+  <button mat-raised-button (click)="deletar()" color="accent">
+      Deletar
+  </button>
+
+  <button mat-raised-button (click)="cancelar()">
+      Cancelar
+  </button>
+</mat-card>

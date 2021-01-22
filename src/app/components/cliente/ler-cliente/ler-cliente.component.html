@@ -1,0 +1,81 @@
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="clientes" class="full-width-table">
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef><strong>
+          <h3>NOME</h3>
+        </strong></th>
+      <td mat-cell *matCellDef="let cliente">{{cliente.nome}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="cpf">
+      <th mat-header-cell *matHeaderCellDef><strong>
+          <h3>CPF</h3>
+        </strong></th>
+      <td mat-cell *matCellDef="let cliente">{{cliente.cpf}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef><strong>
+          <h3>EMAIL</h3>
+        </strong></th>
+      <td mat-cell *matCellDef="let cliente">{{cliente.email}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="dataNascimento">
+      <th mat-header-cell *matHeaderCellDef><strong>
+          <h3>DATA NASCIMENTO</h3>
+        </strong></th>
+      <td mat-cell *matCellDef="let cliente">{{cliente.dataNascimento | date:"dd/MM/yyyy"}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="sexo">
+      <th mat-header-cell *matHeaderCellDef><strong>
+          <h3>SEXO</h3>
+        </strong></th>
+      <td mat-cell *matCellDef="let cliente">{{cliente.sexo}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="nomeSocial">
+      <th mat-header-cell *matHeaderCellDef><strong>
+          <h3>NOME SOCIAL</h3>
+        </strong></th>
+      <td mat-cell *matCellDef="let cliente">{{cliente.nomeSocial}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="apelido">
+      <th mat-header-cell *matHeaderCellDef><strong>
+          <h3>APELIDO</h3>
+        </strong></th>
+      <td mat-cell *matCellDef="let cliente">{{cliente.apelido}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="telefone">
+      <th mat-header-cell *matHeaderCellDef><strong>
+          <h3>TELEFONE</h3>
+        </strong></th>
+      <td mat-cell *matCellDef="let cliente">{{cliente.telefone}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="acoes">
+      <th mat-header-cell *matHeaderCellDef><strong>
+          <h3>AÇÕES</h3>
+        </strong></th>
+      <td mat-cell *matCellDef="let cliente">
+        <a routerLink="/clientes/editar/{{cliente.id}}">
+          <i class="material-icons editar">
+            edit
+          </i>
+        </a>
+
+        <a routerLink="/clientes/deletar/{{cliente.id}}">
+          <i class="material-icons deletar">
+            delete
+          </i>
+        </a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let cliente; columns: displayedColumns;"></tr>
+  </table>
+</div>

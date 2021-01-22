@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-title>Deletar Fornecedor</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nome" [(value)]="fornecedor.nome" name="nome" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Endereco" [(value)]="fornecedor.endereco" name="endereco" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Telefone" [(value)]="fornecedor.telefone" name="telefone" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Cnpj" [(value)]="fornecedor.cnpj" name="cnpj" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Email" [(value)]="fornecedor.email" name="email" disabled>
+    </mat-form-field>
+
+  </form>
+
+  <button mat-raised-button (click)="deletar()" color="accent">
+    Deletar
+  </button>
+
+  <button mat-raised-button (click)="cancelar()">
+    Cancelar
+  </button>
+</mat-card>

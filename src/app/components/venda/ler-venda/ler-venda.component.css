@@ -1,0 +1,44 @@
+.card {
+  width: 300px;
+  max-height: 450px;
+}
+
+.visualizar{
+  float: right;
+  color: #4186c2;
+}
+
+.deletar{
+  float: right;
+  color: #ff0000;
+}
+
+.produto{
+  margin-left: 30px;
+}
+
+.produto2{
+  margin-left: 55px;
+}
+h2, h3{
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  color: #86BA0A;
+}
+
+p{
+  margin: 0px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #4186c2;
+}
+
+mat-grid-list{
+margin-bottom: 100px;
+}

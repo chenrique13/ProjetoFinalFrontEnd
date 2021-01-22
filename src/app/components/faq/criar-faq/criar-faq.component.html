@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-title>Novo Faq</mat-card-title>
+  <form>
+      <mat-form-field>
+          <input matInput placeholder="Texto" [(ngModel)]="faq.texto" name="texto">
+      </mat-form-field>
+
+      <mat-form-field>
+          <mat-label>Produto</mat-label>
+          <mat-select name="produtoId" [(ngModel)]="faq.produto.id">
+              <mat-option *ngFor="let produto of produtos" value="{{produto.id}}">{{produto.nome}}</mat-option>
+          </mat-select>
+      </mat-form-field>
+  </form>
+
+  <button mat-raised-button (click)="criar() " color="primary">
+      Salvar
+  </button>
+
+  <button mat-raised-button (click)="cancelar()">
+      Cancelar
+  </button>
+</mat-card>
