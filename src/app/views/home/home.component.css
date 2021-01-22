@@ -1,0 +1,28 @@
+.titulo{
+  text-align: center;
+}
+
+.divisao{
+  margin-left: 80px;
+}
+.centralizar{
+  margin-top: -200px;
+  width: 80%;
+}
+
+.carlos{
+  margin-left: 100px;
+  width: 250px;
+  height: 300px;
+}
+.cicero{
+  margin-left: 50px;
+  width: 300px;
+  height: 300px;
+}
+
+p{
+  width: 90%;
+  text-align: justify;
+  margin: 0 auto;
+}
